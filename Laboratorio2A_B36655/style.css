@@ -1,0 +1,149 @@
+:root {
+  --color-primario: #8B0000;    
+  --color-secundario: #B22222;  
+  --color-fondo: #ffffff;       
+  --color-texto: #000000;       
+  --color-blanco: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  padding: 1rem;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.tabs-background {
+  width: 100%;
+  background-color: var(--color-secundario);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tabs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+.tabs-container label {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color-secundario);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: -4px;
+}
+
+.tabs-container label:hover {
+  background-color: #444;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+  background-color: var(--color-fondo);
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"] {
+  background-color: #000000;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.Pikachu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.Pikachu-container img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Pikachu-container p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+iframe {
+  max-width: 100%;
+  margin: 1rem auto;
+  display: block;
+}
+
+ul {
+  padding-left: 1.5rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-texto);
+  margin-top: 0;
+  border-top: 5px solid black;
+}
+
+@media (min-width: 768px) {
+  .Pikachu-container {
+      max-width: 800px;
+  }
+}
